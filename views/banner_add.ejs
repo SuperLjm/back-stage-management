@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>后端管理系统--轮播图管理</title>
+    <Link rel = 'stylesheet' href = '/bootstrap/dist/css/bootstrap.min.css' />
+        <Link rel = 'stylesheet' href = '/stylesheets/font-awesome.min.css' />
+        <Link rel = 'stylesheet' href = '/stylesheets/ionicons.min.css' />
+        <Link rel = 'stylesheet' href = '/admin-lte/dist/css/AdminLTE.min.css' />
+        <Link rel = 'stylesheet' href = '/admin-lte/dist/css/skins/skin-blue.min.css' />
+  </head>
+ <body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <%- include('./header.ejs')  %>
+
+  <%- include('./menu.ejs')  %>
+    
+    
+    
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        轮播图管理
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Your Page Content Here -->
+						<div class="box box-primary">
+            
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" method='post' enctype='multipart/form-data' action='/addBannnerAction'>
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">轮播图id</label>
+                  <input type="text" class="form-control" id="bannerid" name='bannerid' placeholder="轮播图id">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">链接地址</label>
+                  <input type="url" class="form-control" id="bannerurl" name='bannerurl' placeholder="链接地址">
+                </div>
+                <div class="form-group">
+                  <label for="bannerimg">上传图片</label>
+                  <input type="file" id="bannerimg" name='bannerimg' />
+
+               
+                </div>
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">添加轮播图</button>
+              </div>
+            </form>
+          </div>
+		</section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <%- include('./footer.ejs')  %>
+  
+  <%- include('./sidebar.ejs')  %>
+
+  
+</div>
+  </body>
+  <script src = "/javascripts/jquery.min.js" ></script>
+    <script src = "/bootstrap/dist/js/bootstrap.min.js" ></script>
+    <script src = "/javascripts/app.min.js" ></script>
+</html>
